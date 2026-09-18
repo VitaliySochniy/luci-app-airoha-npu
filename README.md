@@ -12,9 +12,6 @@ A fork of [rchen14b/luci-app-airoha-npu](https://github.com/rchen14b/luci-app-ai
 ### NPU & Offload Engine
 ![NPU & Offload Engine](screenshots/npu-offload-engine.png)
 
-### PPE Flow Offload Table
-![PPE Flow Table](screenshots/ppe-flow-table.png)
-
 ## Features
 
 ### CPU Frequency Management
