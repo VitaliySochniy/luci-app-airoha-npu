@@ -9,8 +9,8 @@ PKG_LICENSE:=Apache-2.0
 PKG_LICENSE_FILES:=LICENSE
 
 LUCI_TITLE:=LuCI Airoha SoC Status (NPU, CPU, Frame Engine)
-LUCI_MAINTAINER:=Ryan Chen <rchen14b@gmail.com>
-LUCI_URL:=https://github.com/rchen14b/luci-app-airoha-npu
+LUCI_MAINTAINER:=Vitaliy Sochnev <sochnev.v.74@gmail.com>
+LUCI_URL:=https://github.com/VitaliySochniy/luci-app-airoha-npu
 LUCI_DESCRIPTION:=Status page for Airoha EN7581 and AN7583 SoCs: NPU state and \
 	reserved memory, the Frame Engine port counters and PSE queues, the PPE \
 	flow offload table, plus CPU frequency, governor and direct PLL overclock. \
