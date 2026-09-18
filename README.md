@@ -2,12 +2,7 @@
 
 Real-time monitoring and management dashboard for the Airoha AN7581 and AN7583 SoCs on OpenWrt. Covers NPU offload, CPU frequency, WiFi band health, Frame Engine internals, and PPE flow tables.
 
-**[Download](https://github.com/rchen14b/luci-app-airoha-npu/releases/latest)**
-
-![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-![OpenWrt](https://img.shields.io/badge/OpenWrt-24.10%2B-brightgreen.svg)
-![Version](https://img.shields.io/badge/version-1.0.1-orange.svg)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/rchen14b)
+A fork of [rchen14b/luci-app-airoha-npu](https://github.com/rchen14b/luci-app-airoha-npu) with AN7583 support and a pass over the LuCI packaging.
 
 ## Screenshots
 
@@ -77,7 +72,7 @@ The LuCI feed has to be installed first: the package build includes
 
 ```sh
 # Add to your build tree
-git clone https://github.com/rchen14b/luci-app-airoha-npu.git package/luci-app-airoha-npu
+git clone https://github.com/VitaliySochniy/luci-app-airoha-npu.git package/luci-app-airoha-npu
 
 # Enable in menuconfig
 make menuconfig
@@ -92,7 +87,7 @@ out of images that do not ask for it:
 
 ```sh
 # clone anywhere, then point a feed at the directory holding the clone
-git clone https://github.com/rchen14b/luci-app-airoha-npu.git ~/openwrt-feeds/luci-app-airoha-npu
+git clone https://github.com/VitaliySochniy/luci-app-airoha-npu.git ~/openwrt-feeds/luci-app-airoha-npu
 echo "src-link airoha $HOME/openwrt-feeds" >> feeds.conf
 
 ./scripts/feeds update airoha
@@ -156,27 +151,10 @@ luci-app-airoha-npu/
 | `setMaxFreq` | Set CPU max frequency | `freq` (kHz) |
 | `setOverclock` | Direct PLL frequency set | `freq_mhz` |
 
-## Version History
-
-### v1.0.1
-- Unified Frame Engine diagram with architectural layout matching AN7581 data paths
-- WiFi band cards moved into CDM4/WDMA section (reflects actual WiFi DMA path)
-- Added NPU and PPE Engine cards with live status and flow counts
-- Token pool and PPE flows removed from summary table (now in Frame Engine view)
-- Fixed GDM4 register addresses (0x2500, not 0x3500)
-- Improved compact WiFi band chip styling
-
-### v1.0.0
-- CPU frequency management with governor and overclock controls
-- NPU & Offload Engine monitoring with WiFi band cards
-- Frame Engine visualization (GDM ports, CDM offload ratio, PSE queues)
-- PPE flow offload table with auto-refresh
-- Theme-adaptive dark/light mode detection
-
 ## License
 
 Apache-2.0
 
-## Author
+## Credits
 
-Ryan Chen — Created for W1700K router (Airoha AN7581 + MT7996 BE19000)
+Written by Ryan Chen for the W1700K router (Airoha AN7581 + MT7996 BE19000). This fork adds AN7583 support and reworks the LuCI side; see the git log.
